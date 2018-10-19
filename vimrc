@@ -1,5 +1,6 @@
-" Usage: when first installing, run :PluginInstall, then 
-" cd ~/.vim/bundle/YouCompleteMe && sudo sh ./install.sh
+" Usage: when first installing, install macvim,  run :PluginInstall, then 
+" ln -s /usr/local/bin/mvim vim
+" cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
 set nocompatible              " be iMproved, required
 
 " set the runtime path to include Vundle and initialize
@@ -22,7 +23,6 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
 set mouse=a
 au VimEnter *  NERDTree
 autocmd VimEnter * wincmd p
@@ -37,11 +37,13 @@ source ~/.vim_runtime/vimrcs/filetypes.vim
 source ~/.vim_runtime/vimrcs/plugins_config.vim
 source ~/.vim_runtime/vimrcs/extended.vim
 let macvim_skip_colorscheme = 1
+set guicursor=i:ver25-iCursor
+set clipboard=unnamed
+colorscheme molokai
 try
 source ~/.vim_runtime/my_configs.vim
 catch
 endtry
 :set number
-
 
 
