@@ -1,5 +1,3 @@
-set nocompatible            
-
 filetype plugin indent on  
 set background=dark
 set tabstop=2
